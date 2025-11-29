@@ -1,0 +1,17 @@
+h1{
+    color: blue;
+}
+
+#CSE {
+    background-color: burlywood;
+}
+
+.HTE {
+    text-transform: uppercase;
+    font-family: fantasy;
+    font-size: 50px;
+}
+
+*{
+    text-align: center;
+}

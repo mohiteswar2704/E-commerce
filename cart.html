@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet"  href="style.css">
+  
+    
+</head>
+<body>
+    <header>
+        <div id="user-display"></div>
+
+        <h1>🛍️ MyShop</h1>
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="mobiles.html">mobiles</a>
+                <a href="watches.html">watches</a>
+                <a href="sports.html">sports</a>
+                <a href="cart.html">🛒Cart</a>
+            </nav>
+            <button id="login-btn" class="login-btn" onclick="location.href='login.html'">Login</button>
+        </div>
+    </header>
+    <section class="cart">
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <h3 id="cart-total"> total:0.00$</h3>
+        <button id="checkout-btn">Checkout</button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

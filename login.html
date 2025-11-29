@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login </title>
+<script>
+    function handleLogin(e) {
+        e.preventDefault();
+        const username = (document.forms['loginForm'].t1.value || '').trim();
+        const password = (document.forms['loginForm'].pass1.value || '').trim();
+
+     
+        if (username === 'mohit' && password === 'mohit') {
+            localStorage.setItem('loginUser', username);
+            alert('Login successful!');
+            window.location.href = 'index.html';
+        } else {
+            alert('Invalid username or password.');
+          
+            localStorage.removeItem('loginUser');
+            return false;
+        }
+    }
+</script>
+
+</head>
+<body>
+    <form name="loginForm" onsubmit="handleLogin(event)">
+    <center>
+    <h1>E-Commerce Login</h1> <br><br>
+    Username: <input type="text" name="t1"> <br><br>
+    Passwsord: <input type="password" name="pass1"> <br><br>
+    <input type="submit" value="Sign in">
+    </center>
+    </form>
+</body>
+</html>

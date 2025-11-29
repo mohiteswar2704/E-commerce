@@ -1,0 +1,42 @@
+body{
+    border: 0;
+    font-family: franklin gothic medium, sans-serif;
+    background-color: whitesmoke;
+}
+header{
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a{
+    color:white;
+    margin:0px 20px;
+    text-decoration:none;
+    font-size: 15px;
+    text-align: center;
+    
+}
+
+.btn{
+    background-color: black;
+    display:inline-block;
+    color:white;
+    padding: 10px 20px;
+    text-decoration:none;
+    font-size: 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+.cart {
+    max-width: 900px; /* limit width so it's centered nicely */
+    margin: 40px auto; /* center horizontally */
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <script>
+        // validate receives the form element as an argument (named `f`)
+        function validate(f){
+            if(f.t1.value==""){
+                alert("please enter your name");
+                return false;
+            }
+            if(f.email1.value==""){
+                alert("please enter your email");
+                return false;
+            }
+            var a1 = f.pass1.value;
+            var s2 = f.pass2.value;
+            if(a1=="" || s2==""){
+                alert("please enter both password fields");
+                return false;
+            }
+            if(a1 != s2){
+                alert("passwords do not match");
+                return false;
+            }
+            var m = f.mobile.value || "";
+            if(m.length != 10){
+                alert("please enter valid mobile number");
+                return false;
+            }
+            var g1 = (f.gender && f.gender[0]) ? f.gender[0].checked : false;
+            var g2 = (f.gender && f.gender[1]) ? f.gender[1].checked : false;
+            if(!g1 && !g2){
+                alert("choose any one gender");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="form1" method="post" action="sucess.html" onsubmit="return validate(this)">
+<h1>student registration form</h1><br><br>
+name:<input type="text"name="t1" required><br><br>
+email:<input type="email" name="email1" required><br><br>
+password:<input type="password" name="pass1" required><br><br>
+confirm-password:<input type="password"name="pass2"required><br><br>
+mobile No:<input type="number" name="mobile" ><br><br>
+Gender:<input type ="radio" name="gender">male
+<input type="radio" name="gender">female<br><br>
+
+
+<input type="submit" value="submit">
+<input type="reset"value="reset">
+
+
+
+
+</form>
+</body>
+</html>

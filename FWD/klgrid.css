@@ -1,0 +1,214 @@
+/* Basic layout for header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: red;
+}
+
+.logo-left {
+  /* Make the logo a bit smaller while keeping image aspect ratio */
+  height: auto; /* let width drive sizing */
+  width: 340px; /* reduced from 420 */
+  max-width: 35%;
+}
+
+.logo-right {
+  height: auto;
+  width: 120px;
+  max-width: 15%;
+  object-fit: contain;
+}
+
+.header-text {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .logo-left, .logo-right {
+    width: 60%;
+    max-width: none;
+  }
+  .header-text {
+    margin: 8px 0;
+  }
+}
+
+/* Simple styles for other elements so layout looks acceptable */
+.container { display: flex; gap: 20px; padding: 20px; }
+.sidebar { width: 180px; }
+.content { flex: 1; }
+.image-gallery img { max-width: 100%; height: auto; margin: 8px; }
+.footer-btn { display: inline-block; margin: 6px; padding: 8px 12px; background:#eee; }
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: red;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  color: black;
+  padding: 15px 20px;
+}
+
+.logo-right {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+.header-text {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.header-text h1 {
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+.header-text p {
+  font-size: 0.95em;
+}
+
+/* Layout container */
+.container {
+  display: flex;
+  min-height: 70vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background-color: blue;
+  padding-top: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: yellow;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: orange;
+}
+
+/* Main content */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #9B1C1F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:first-child {
+  background-color: #9B1C1F;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #9B1C1F;
+  padding: 15px 0;
+}
+
+.footer-btn {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.footer-btn a {
+  text-decoration: none;
+  color: #9B1C1F;
+}
+
+.footer-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.footer-btn:hover a {
+  color: #7a1619;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-btn {
+    margin: 5px 0;
+  }
+}
