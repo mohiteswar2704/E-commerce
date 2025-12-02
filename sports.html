@@ -9,24 +9,6 @@
 <body>
     <header>
         <h1>🛍️ MyShop</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="mobiles.html">mobiles</a>
-            <a href="watches.html">watches</a>
-             <a href="sports.html">sports</a>
-            <a href="cart.html">🛒Cart</a>
-
-           
-            
-
-            
-        </nav>
-    </header>
-    <section class="products">
-        <h2>Our Products</h2>
-        <div class="product-list">
-        <div id="user-display"></div>
-        <h1>🛍️ MyShop</h1>
         <div class="header-right">
             <nav>
                 <a href="index.html">Home</a>
@@ -35,18 +17,31 @@
                 <a href="sports.html">sports</a>
                 <a href="cart.html">🛒Cart</a>
             </nav>
+            <div id="user-display"></div>
             <button id="login-btn" class="login-btn" onclick="location.href='login.html'">Login</button>
         </div>
-            </div>
+    </header>
+    <section class="products">
+        <h2>Our Products</h2>
+        <div class="product-list">
             <div class="product-item">
                 <h3>badminton</h3>
                 <img src="badminton.jpeg" height="200" width="200" alt="Product 3">
                 <p>Price: $10.00</p>
                 <button onclick="addToCart('badminton', 10.00)">Add to Cart</button>
             </div>
-              
-             
-              
+            <div class="product-item">
+                <h3>Tennis</h3>
+                <img src="Tennis.jpg" height="200" width="200" alt="Product 3">
+                <p>Price: $25.00</p>
+                <button onclick="addToCart('Tennis', 25.00)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <h3>cricket</h3>
+                <img src="cricket.jpeg" height="200" width="200" alt="Product 3">
+                <p>Price: $30.00</p>
+                <button onclick="addToCart('cricket', 30.00)">Add to Cart</button>
+        </div>
     </section>
     <script src="script.js"></script>
 </body>
